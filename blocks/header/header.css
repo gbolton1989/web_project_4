@@ -1,0 +1,16 @@
+@import url(../header/__vector/header__vector.css);
+
+.header {
+    margin: 0;
+    max-width: 882px;
+    max-height: 74px; 
+    height: 100vh;
+    position: relative;
+    border-bottom:  1px solid #545454;
+}
+
+@media screen and (max-width: 425px){
+    .header {
+        max-height: 56px;
+    }
+}
