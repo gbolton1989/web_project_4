@@ -29,7 +29,3 @@ function toggleModal(){
 editButton.addEventListener("click", toggleModal)
 
 closeButton.addEventListener("click", toggleModal)
-
-
-console.log(form)
-console.log(modal)

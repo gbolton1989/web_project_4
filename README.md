@@ -6,3 +6,5 @@ A page where users can edit their profile info, made possible by the use of Java
 
 
 https://gbolton1989.github.io/web_project_4/
+
+Fixed headings and other errors marked on review.
