@@ -13,7 +13,7 @@
     color: #000000;
   }
   
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 585px) {
     .form__input {
       max-width: 210px;
     }

@@ -36,53 +36,8 @@
         </section>
 
         <section class="elements">
-            <div class="element">
-                <img src="images/kirill-pershin-1088404-unsplash1.png" class="element__image" alt="a photo of a river running between trees">
-                <div class="element__container">
-                    <h2 class="element__place-title">Yosemite Valley</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
-            
-            <div class="element">
-                <img src="images/kirill-pershin-1404681-unsplash.png" class="element__image" alt="a photo of a lake with mountains in the background">
-                <div class="element__container">
-                    <h2 class="element__place-title">Lake Louise</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
-            
-            <div class="element">
-                <img src="images/kirill-pershin-1556355-unsplash.png" class="element__image" alt="a photo of the sun setting over a string of mountains">
-                <div class="element__container">
-                    <h2 class="element__place-title">Bald Mountains</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
-            
-            <div class="element">
-                <img src="images/kirill-pershin-1404681-unsplash(1).png" class="element__image" alt="a photo of mountains underneath a starry night sky">
-                <div class="element__container">
-                    <h2 class="element__place-title">Latemar</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
-            
-            <div class="element">
-                <img src="images/kirill-pershin-1556355-unsplash(1).png" class="element__image" alt="a photo of a river bank with mountains in the background">
-                <div class="element__container">
-                    <h2 class="element__place-title">Vanoise National Park</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
-            
-            <div class="element">
-                <img src="images/kirill-pershin-1088404-unsplash.png" class="element__image" alt="a photo of boats next to a pier with mountains in the distance">
-                <div class="element__container">
-                    <h2 class="element__place-title">Lago di Braies</h2>
-                    <button class="element__heart"></button>
-                </div>
-            </div>
+            <ul class="element__list">
+            </ul>
         </section>
         </main>
 
@@ -90,20 +45,53 @@
             <p class="footer__copyright">© 2020 Around The U.S.</p>
         </footer>
 
-        <div class="popup">
+        <div class="popup popup_edit-profile">
             <div class="popup__container">
-              <button type="button" class="popup__close popup__close_image"></button>
+              <button type="button" class="popup__close popup__close_form"></button>
               <form action="#" class="form">
                 <h2 class="popup__edit">Edit Profile</h2>
-                <input type="text" value="Frito" placeholder="Name" class="form__input  form__input_name">
-                <input type="text" value="Bandito" placeholder="About Me" class="form__input form__input_aboutme">
+                <input type="text" value="" placeholder="Name" class="form__input  form__input_name">
+                <input type="text" value="" placeholder="About Me" class="form__input form__input_aboutme">
                 <button class="popup__submit-button" type="submit">Save</button>
               </form>
             </div>
         </div>
 
+        <div class="popup popup_add-element">
+            <div class="popup__container">
+              <button type="button" class="popup__close popup__close_form"></button>
+              <form action="#" class="form__add-element">
+                <h2 class="popup__edit">New place</h2>
+                <input type="text" value="" placeholder="Title" class="form__input  form__input_title">
+                <input type="url" value="" placeholder="Image link" class="form__input form__input_url">
+                <button class="popup__submit-button" type="submit">Create</button>
+              </form>
+            </div>
+        </div>
+
+        <div class="popup popup_type_image">
+            <div class="popup__container popup__container_type_image">
+              <button type="button" class="popup__close popup__close_image"></button>
+              <figure class="popup__figure">
+                  <img src="" class="popup__image" alt="">
+                  <figcaption class="popup__image-title"></figcaption>
+              </figure>
+            </div>
+        </div>
+
     </div>
     
+    <template id="element-template">
+        <li class="element">
+            <button class="element__delete"></button>
+            <img src="" class="element__image" alt=""></div>            
+            <div class="element__container">
+                <h2 class="element__place-title"></h2>
+                <button class="element__heart"></button>
+            </div>
+        </li>
+    </template>
+
     <script src="scripts/index.js"></script>
 
 </body>

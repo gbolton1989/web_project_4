@@ -10,3 +10,11 @@
     background-position: center;
     box-sizing: border-box;
 }
+
+.element__heart_active {
+    background-image: url(../../../images/fullheart.svg);
+}
+
+.element__heart:hover {
+    opacity: .6;
+}

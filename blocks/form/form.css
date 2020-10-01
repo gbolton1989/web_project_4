@@ -1,4 +1,5 @@
 @import url("../form/__input/form__input.css");
+@import url("../form/__add-element/form__add-element.css");
 
 .form {
   background-color: #ffffff;

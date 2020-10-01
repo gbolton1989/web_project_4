@@ -1,9 +1,16 @@
+@import url("../__container/_type/popup__container_type_image.css");
+
 .popup__container {
-    background: white;
-    padding: 20px;
+    position: absolute;
     border-radius: 10px;
     box-shadow: 0 0 2px black;
     display: flex;
+  }
+  
+  @media screen and (max-width: 590px){
+    .popup__container{
+      max-width: 80%;
+    }
   }
   
   @media screen and (max-width: 320px){
