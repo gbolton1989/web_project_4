@@ -16,14 +16,17 @@ const editForm = document.querySelector(".form");
 const addElementForm = document.querySelector(".form__add-element");
 
 //Profile
-const nameInput = editForm.querySelector('.form__input_name');
-const aboutInput = editForm.querySelector('.form__input_aboutme');
-const profileName = document.querySelector('.profile__name');
-const profileSubname = document.querySelector('.profile__title');
+const nameInput = document.querySelector(".form__input_name");
+const aboutInput = document.querySelector(".form__input_aboutme");
+const profileName = document.querySelector(".profile__name");
+const profileSubname = document.querySelector(".profile__title");
 
 //Add form
 const elementTitleInput = document.querySelector(".form__input_title");
 const elementImageUrlInput = document.querySelector(".form__input_url");
+
+const popupImage = imageModalWindow.querySelector(".popup__image");
+const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
 
 
 function toggleModalWindow(modal){
@@ -40,8 +43,8 @@ function formSubmitHandler(evt) {
 editForm.addEventListener("submit", formSubmitHandler);
 editButton.addEventListener("click", () => {
     if (!editProfileModalWindow.classList.contains("popup_is")) {
-        nameInput.value = profileName.textContent;
-        aboutInput.value = profileSubname.textContent;
+        nameInput.value = profileName.children[0].textContent;
+        aboutInput.value = profileSubname.children[0].textContent;
     }
     toggleModalWindow(editProfileModalWindow);
 })
@@ -128,9 +131,6 @@ function createElement(title, imageLink) {
     })
 
     elementImage.addEventListener("click", () => {
-        const popupImage = imageModalWindow.querySelector(".popup__image");
-        const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
-
         popupImage.src = imageLink;
         popupImage.alt = title;
         popupImageTitle.textContent = title;

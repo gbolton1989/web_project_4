@@ -8,3 +8,5 @@ A page where users can edit their profile info and add new places they have pict
 https://gbolton1989.github.io/web_project_4/
 
 I added more JS functionality to add new place elements as well as being able to like and delete place elements as well. 
+
+I also fixed all issues that came up in the code review.
