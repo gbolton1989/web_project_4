@@ -1,0 +1,14 @@
+@import url("../__error/_visible/form__error_visible.css");
+
+.form__error {
+    margin-top: 5px;
+    width: 358px;
+}
+
+
+
+@media screen and (max-width: 585px) {
+    .form__error {
+        width: 75%;
+    }
+}

@@ -29,22 +29,22 @@ const popupImage = imageModalWindow.querySelector(".popup__image");
 const popupImageTitle = imageModalWindow.querySelector(".popup__image-title");
 
 
-function toggleModalWindow(modal){
-    modal.classList.toggle("popup_is-opened");
-}
+//function toggleModalWindow(modal){
+//    modal.classList.toggle("popup_is-opened");
+//}
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
-    profileName.textContent = nameInput.value;
-    profileSubname.textContent = aboutInput.value;
+    profileName.innerText = nameInput.value;
+    profileSubname.innerText = aboutInput.value;
     toggleModalWindow(editProfileModalWindow);
 }
 
 editForm.addEventListener("submit", formSubmitHandler);
 editButton.addEventListener("click", () => {
     if (!editProfileModalWindow.classList.contains("popup_is")) {
-        nameInput.value = profileName.children[0].textContent;
-        aboutInput.value = profileSubname.children[0].textContent;
+        nameInput.value = profileName.innerText;
+        aboutInput.value = profileSubname.innerText;
     }
     toggleModalWindow(editProfileModalWindow);
 })
@@ -142,3 +142,35 @@ function createElement(title, imageLink) {
     return elementCard;
 }
 
+const ESC_KEY = 27;
+
+const closeWithEsc = ({ keyCode }) => {
+    if (keyCode === ESC_KEY) {
+        const activeModal = document.querySelector(".popup_is-opened");
+        toggleModalWindow(activeModal);
+    }
+}
+
+const closeWithClick = ({ target }) => {
+    if (target.classList.contains("popup__close") ||
+        target.classList.contains("popup_is-opened")) {
+        const activeModal = document.querySelector(".popup_is-opened");
+        toggleModalWindow(activeModal);
+    }
+};
+
+const toggleModalWindow = modal => {
+    const isModalOpened = modal.classList.contains("popup_is-opened");
+
+
+    modal.classList.toggle("popup_is-opened");
+
+    if (isModalOpened) {
+        document.removeEventListener('keydown', closeWithEsc);
+        modal.removeEventListener('click', closeWithClick);
+
+    } else {
+        document.addEventListener('keydown', closeWithEsc);
+        modal.addEventListener('click', closeWithClick);
+    }
+};

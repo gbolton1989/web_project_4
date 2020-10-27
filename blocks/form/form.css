@@ -1,12 +1,19 @@
 @import url("../form/__input/form__input.css");
 @import url("../form/__add-element/form__add-element.css");
+@import url("../form/__error/form__error.css");
 
 .form {
-  background-color: #ffffff;
-  max-width: 430px;
-  height: 330px;
-  margin: auto;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 430px;
+  min-height: 330px;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
+
+@media screen and (max-width: 320px){
+  .form {
+    width: 100%;
+  }
+}  
